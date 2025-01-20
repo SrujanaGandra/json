@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>json</title>
+  </head>
+  <body>
+    <h1>
+        “Loved you yesterday, love you still, always have, always will.”
+    </h1>
+    <script>
+      let details = {
+        name: "Nanna",
+        email: "nannalove@gmail.com",
+        age: 26,
+        city: "hyd",
+      };
+      let makejson = JSON.stringify(details);
+      
+      let storejson = localStorage.setItem("user1", makejson);
+      let getdata = JSON.parse(localStorage.getItem("user1"));
+      console.log(getdata);
+    </script>
+  </body>
+</html>
